@@ -1,9 +1,8 @@
-html {
-  background-color: #282828;
-  color: #d8d8d8;
-}
-
 .App {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  /* justify-content: space-between; */
   text-align: center;
 }
 
@@ -13,12 +12,26 @@ html {
   color: white;
 }
 
+.App-content{
+  flex: 1;
+}
+
+.App-footer {
+  /* justify-self: flex-end; */
+  background-color: #222;
+  padding: 20px;
+}
+
 .App-title {
   font-size: 1.5em;
 }
 
 .App-intro {
   font-size: large;
+}
+
+a {
+  color: white;
 }
 
 @keyframes App-logo-spin {

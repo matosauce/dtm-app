@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
+import Header from './Header';
+import Footer from './Footer';
+import Bonus from './Bonus';
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div className="App">
-          <header className="App-header">
-            <h1 className="App-title">Hello!</h1>
-          </header>
-          <Route exact={true} path="/bonus" render={() => (
-            <p className="App-intro">
-              My name is Drew Murdoch. This is my fucking website yo!
-            </p>
-          )} />
+          <Header />
+          <div className="App-content">
+            <div>
+              <Link to="/">Home</Link>
+            </div>
+            <div>
+              <Link to="/bonus">Bonus Content!!</Link>
+            </div>
+            <Route path="/bonus" component={Bonus} />
+          </div>
+          <Footer />
         </div>
       </Router>
     );
